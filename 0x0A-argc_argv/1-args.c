@@ -2,7 +2,10 @@
 
 /**
  * main - Prints the number of arguments passed to it.
- * Return: Always 0.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return Value:Is always 0.
  */
 int main(int argc, char __attribute__((__unused__)) *argv[])
 {
