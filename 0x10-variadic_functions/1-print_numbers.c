@@ -3,32 +3,32 @@
 #include "variadic_functions.h"
 
 /**
-*print_numbers- This describes a Function that prints numbers, followed by a new line.
+*print_numbers- Function that prints numbers, followed by a new line.
 *
 *@separator: char value
 *@n:Int value
 *
-*Return:Is always 0;
+*Return: Always 0
 */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-        va_list args;
-        unsigned int i;
+	va_list args;
+	unsigned int i;
 
-        /*initialize valist for num number or argument */
-        va_start(args, n);
+	/*initialize valist for num number or argument */
+	va_start(args, n);
 
-        /* access all the arguments assigned to valist */
-        for (i = 0; i < n; i++)
-        {
-                printf("%d", va_arg(args, int));
-                if (i != (n - 1) && separator != NULL)  /* n-1 is for the comma*/
-                {
-                        printf("%s", separator);
-                }
-        }
-        printf("\n");
-        /*clean memory reserved for valist */
-        va_end(args);
+	/* access all the arguments assigned to valist */
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", va_arg(args, int));
+		if (i != (n - 1) && separator != NULL)  /* n-1 is for the comma*/
+		{
+			printf("%s", separator);
+		}
+	}
+	printf("\n");
+	/*clean memory reserved for valist */
+	va_end(args);
 
 }
